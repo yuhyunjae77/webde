@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="wrap">
+        <div id="modal_box" class="modal_box">
+            <div class="modal_header"> 
+                <p>글로벌투어스 모달창</p>
+            </div>
+            <div class="modal_body">모달 텍스트</div>
+            <div class="modal_footer"> <button onclick="popup_close()">닫기</button></div>
+        </div>
+        <header>
+            <div class="logo">
+                <a href="#">
+                    <img src="image/logo.png" alt="">
+                </a>
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="#">메뉴1</a>
+                        <ul class="submenu">
+                            <li>서브메뉴</li>
+                            <li>서브메뉴</li>
+                            <li>서브메뉴</li>
+                            <li>서브메뉴</li>
+                        </ul>
+                    </li>
+                    <li><a href="#">메뉴2</a>
+                        <ul class="submenu">
+                            <li>서브메뉴</li>
+                            <li>서브메뉴</li>
+                            <li>서브메뉴</li>
+                            <li>서브메뉴</li>
+                        </ul>
+                    </li>
+                    <li><a href="#">메뉴3</a>
+                        <ul class="submenu">
+                            <li>서브메뉴</li>
+                            <li>서브메뉴</li>
+                            <li>서브메뉴</li>
+                            <li>서브메뉴</li>
+                        </ul>
+                    </li>
+                    <li><a href="#">메뉴4</a>
+                        <ul class="submenu">
+                            <li>서브메뉴</li>
+                            <li>서브메뉴</li>
+                            <li>서브메뉴</li>
+                            <li>서브메뉴</li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="container">
+            <div class="slider">
+                <div class="slide">
+                    <div class="slide_text">
+                        <h1>Slide1</h1>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide_text">
+                        <h1>Slide2</h1>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide_text">
+                        <h1>Slide3</h1>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="slide_text">
+                        <h1>Slide1</h1>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <div class="content">
+            <div class="con1">
+                <input type="radio" name="tab" id="tab1" checked>
+                <input type="radio" name="tab" id="tab2">
+                <div class="con_header">
+                    <div class="la_box" style="display: flex;">
+                        <label for="tab1">공지사항</label>
+                        <label for="tab2">갤러리</label>
+                    </div>
+                </div>
+                <div class="con_body">
+                    <div class="con_box1">
+                        <div class="notice_item" onclick="popup_open()">
+                            <p>공지사항 텍스트</p>
+                            <span>2025-06-29</span>
+                        </div>
+                        <div class="notice_item">
+                            <p>공지사항 텍스트</p>
+                            <span>2025-06-29</span>
+                        </div>
+                        <div class="notice_item">
+                            <p>공지사항 텍스트</p>
+                            <span>2025-06-29</span>
+                        </div>
+                        <div class="notice_item">
+                            <p>공지사항 텍스트</p>
+                            <span>2025-06-29</span>
+                        </div>
+                        <div class="notice_item">
+                            <p>공지사항 텍스트</p>
+                            <span>2025-06-29</span>
+                        </div>
+                    </div>
+                    <div class="con_box2">
+                    <img src="image/webslide1.jpg" alt="">
+                    <img src="image/webslide2.jpg" alt="">
+                    <img src="image/webslide3.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="con2">
+                <div class="con_header">
+                    <p style="font-weight: 900;">배너</p>
+                </div>
+                <div class="con_body" id="bo">
+                    <button>지금 알아보기</button>
+                    <img src="image/webslide1.jpg" alt="">
+                </div>
+            </div>
+            <div class="con3">
+                <div class="con_header">
+                    <p style="font-weight: 900;">바로가기</p>
+                </div>
+                <div class="con_body">
+                    <a href="#">바로가기1</a>
+                    <a href="#">바로가기2</a>
+                    <a href="#">바로가기3</a>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="fo1">
+                <a href="#">
+                    <img src="image/logo.png" alt="">
+                </a>
+            </div>
+            <div class="fo2">
+                <p class="copy">@COPYRIGHT2023</p>
+            </div>
+            <div class="fo3">
+                <a href="#"></a>
+                <a href="#"></a>
+                <a href="#"></a>
+            </div>
+        </footer>
+    </div>
+    
+     <script src="script.js"></script>
+</body>
+</html>

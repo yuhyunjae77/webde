@@ -1,0 +1,348 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+#wrap {
+    width: 1200px;
+    position: relative;
+}
+.modal_box {
+    width: 500px;
+    height: 400px;
+    background-color: skyblue;
+    border: 2px solid white;
+    position: absolute;
+    z-index: 999;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+.modal_header{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.modal_header p {
+    position: absolute;
+    left: 20px;
+    color: white;
+    font-weight: 900;
+    font-size: 22px;
+}
+.modal_footer {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.modal_footer button {
+    position: absolute;
+    right: 20px;
+    width: 120px;
+    height: 40px;
+    background-color: white;
+}
+
+.modal_body {
+    width: 100%;
+    height: calc(100% - 100px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    background-color: #daf5ff;
+}
+.logo {
+    width: 200px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo a {
+    width: 200px;
+    height: 40px;
+}
+.logo a img {
+    width: 200px;
+    height: 40px;
+    object-fit: cover;
+}
+header nav {
+    width: calc(100% - 200px);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.menu {
+    position: absolute;
+    right: 0;
+    background-color: skyblue;
+    z-index: 1;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.menu > li a {
+    color: white;
+    font-weight: 900;
+}
+.menu > li {
+    width: 120px;
+    float: left;
+}
+.menu li {
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+}
+.submenu {
+    transition: 0.4s;
+    height: 0%;
+    background-color: white;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+.slider {
+    transition: 0.4s;
+    width: calc(100% * 4);
+    height: 100%;
+    display: flex;
+}
+.slide {
+    width: calc(100% / 4);
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.slide:nth-child(1),
+.slide:nth-child(4) {
+    background-image: url(image/webslide1.jpg);
+}
+.slide:nth-child(2) {
+    background-image: url(image/webslide2.jpg);
+}
+.slide:nth-child(3) {
+    background-image: url(image/webslide3.jpg);
+}
+.slide_text {
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.slide_text h1 {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+}
+.content {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    background-color: #daf5ff;
+}
+.content > div {
+    width: calc(100% / 3);
+    height: 100%;
+    border-right: 2px solid white;
+}
+.con_header {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid white;
+}
+.con_header p {
+    color: black;
+    position: absolute;
+    left: 20px;
+}
+
+.con_body {
+    width: 100%;
+    height: calc(100% - 50px);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.notice_item {
+    width: 100%;
+    height: calc(100% / 5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-bottom: 1px solid white;
+}
+.notice_item p {
+    position: absolute;
+    left: 40px;
+}
+.notice_item span {
+    position: absolute;
+    right: 40px;
+}
+.con_body a {
+    width: 75%;
+    height: 35px;
+    background-color: white;
+    border-radius: 10px;
+    color: black;
+    text-align: center;
+    line-height: 35px;
+    font-weight: 900;
+}
+
+footer {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    background-color: rgb(236, 236, 236);
+    position: relative;
+    z-index: 1;
+}
+input[type=radio] {
+    display: none;
+}
+#tab1:checked ~ .con_body .con_box1,
+#tab2:checked ~ .con_body .con_box2 {
+    height: 100%;
+}
+#tab1:checked ~ .con_header .la_box label:nth-child(1),
+#tab2:checked ~ .con_header .la_box label:nth-child(2) {
+    background-color: white;
+}
+.con_box1,
+.con_box2 {
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.la_box {
+    position: absolute;
+    left: 0;
+}
+.la_box label:nth-child(1) {
+    margin-left: 20px;
+}
+.la_box label {
+    font-weight: 900;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 10px 10px 0 0 ;
+}
+.fo1,
+.fo3 {
+    width: 200px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fo1 a,
+.fo1 a img {
+    width: 200px;
+    height: 40px;
+}
+.fo1 a img {
+    object-fit: cover;
+    filter: grayscale(100%);
+}
+.fo3 a {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 33px;
+    font-weight: 900;
+    color: white;
+}
+.fo3 a:nth-child(1) {
+    background-color: red;
+}
+.fo3 a:nth-child(1)::after {
+    content: '▶︎';
+}
+.fo3 a:nth-child(2)::after {
+    content: 'f';
+}
+.fo3 a:nth-child(3)::after {
+    content: 'N';
+}
+.fo3 a:nth-child(2) {
+    background-color: blue;
+}
+.fo3 a:nth-child(3) {
+    background-color: green;
+}
+.fo2 {
+    width: calc(100% - 400px);
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fo2 .copy {
+    position: absolute;
+    bottom: 20px;
+}
+#bo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.con_body button {
+    width: 120px;
+    height: 40px;
+    backdrop-filter: blur(20px);
+    color: white;
+    text-shadow: 0 0 1px black;
+    background-color: transparent;
+    position: absolute;
+    border: none;
+    border-radius: 30px;
+    font-weight: 900;
+}
+.con_box2 img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid white;
+}
